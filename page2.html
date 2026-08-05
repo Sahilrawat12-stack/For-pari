@@ -51,4 +51,30 @@ position:absolute;
 <body>
 
 <div class="box">
-<h
+<h2>Do you think I'm cute? 🥹❤️</h2>
+
+<button id="yes" onclick="nextPage()">Yes 😍</button>
+<button id="no" onmouseover="move()">No 😒</button>
+
+</div>
+
+<script>
+
+function nextPage(){
+window.location.href="./page3.html";
+}
+
+function move(){
+let btn=document.getElementById("no");
+
+let x=Math.random()*(window.innerWidth-120);
+let y=Math.random()*(window.innerHeight-60);
+
+btn.style.left=x+"px";
+btn.style.top=y+"px";
+}
+
+</script>
+
+</body>
+</html>
