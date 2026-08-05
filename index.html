@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Pari ❤️</title>
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(#ff4d6d,#ff9a9e);
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+.box{
+background:rgba(255,255,255,.2);
+padding:30px;
+border-radius:20px;
+width:85%;
+max-width:400px;
+}
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:15px;
+}
+#msg{
+display:none;
+margin-top:20px;
+font-size:18px;
+}
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:up 5s linear infinite;
+}
+@keyframes up{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>❤️ Hey Pari ❤️</h1>
+<p>Ek chhoti si surprise sirf tumhare liye...</p>
+
+<button onclick="showLove()">Open ❤️</button>
+
+<div id="msg">
+<h2>I Love You ❤️</h2>
+
+<p>
+30 July 2026 meri life ki sabse beautiful date ban gayi ❤️<br><br>
+
+Tum meri smile ho 😊<br>
+Meri peace ho 🌸<br>
+Meri comfort ho 💕<br>
+Aur meri favourite person ho ❤️<br><br>
+
+Thank you meri life me aane ke liye.<br><br>
+
+I Love You So Much Pari 🌹
+</p>
+
+</div>
+</div>
+
+<script>
+function showLove(){
+document.getElementById("msg").style.display="block";
+
+setInterval(function(){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(20+Math.random()*20
