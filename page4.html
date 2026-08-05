@@ -54,4 +54,31 @@ position:absolute;
 <body>
 
 <div class="box">
-<h2>One Last
+<h2>One Last Question... ❤️</h2>
+<p>Will You Stay With Me Forever? 🥹</p>
+
+<button id="yes" onclick="nextPage()">Yes 💍</button>
+<button id="no" onmouseover="moveButton()">No 🙈</button>
+
+</div>
+
+<script>
+
+function nextPage(){
+window.location.href="./page5.html";
+}
+
+function moveButton(){
+let btn=document.getElementById("no");
+
+let x=Math.random()*(window.innerWidth-120);
+let y=Math.random()*(window.innerHeight-60);
+
+btn.style.left=x+"px";
+btn.style.top=y+"px";
+}
+
+</script>
+
+</body>
+</html>
