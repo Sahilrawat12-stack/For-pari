@@ -1,161 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️ For Pari ❤️</title>
+<title>For Pari ❤️</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#ff4d6d,#ff9a9e);
-overflow:hidden;
+background:#ffb6c1;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-color:white;
-text-align:center;
+font-family:Arial;
+overflow:hidden;
 }
 
 .box{
-width:90%;
-max-width:420px;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(10px);
+background:white;
 padding:30px;
 border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,.2);
-animation:fade 1s;
-}
-
-img{
-width:220px;
-height:220px;
-border-radius:20px;
-object-fit:cover;
-border:4px solid white;
-margin-bottom:15px;
-}
-
-h1{
-font-size:32px;
-margin-bottom:10px;
-}
-
-p{
-font-size:18px;
-margin:12px 0;
-line-height:28px;
+text-align:center;
+box-shadow:0 0 20px pink;
 }
 
 button{
-padding:14px 28px;
+padding:12px 25px;
 font-size:18px;
 border:none;
 border-radius:30px;
-background:white;
-color:#ff4d6d;
-font-weight:bold;
 cursor:pointer;
-margin-top:15px;
+margin:10px;
 }
 
-button:hover{
-transform:scale(1.05);
-}
-
-@keyframes fade{
-from{opacity:0;transform:scale(.8);}
-to{opacity:1;transform:scale(1);}
-}
-
-.heart{
-position:absolute;
-font-size:25px;
-animation:fall linear infinite;
+#yes{
+background:#ff4d6d;
 color:white;
 }
 
-@keyframes fall{
-0%{
-transform:translateY(-100px);
-opacity:1;
-}
-100%{
-transform:translateY(110vh);
-opacity:0;
-}
+#no{
+background:#ccc;
+position:absolute;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="box">
+<h1>Pari ❤️</h1>
+<h2>Will You Be My Forever? 🥹</h2>
 
-<img id="photo" src="PHOTO1.jpg">
-
-<h1>Hey Pari ❤️</h1>
-
-<p id="text">
-Every moment with you is my favourite memory...
-</p>
-
-<button onclick="nextPage()">Next ❤️</button>
-
+<button id="yes" onclick="yes()">Yes ❤️</button>
+<button id="no" onmouseover="move()">No 😝</button>
 </div>
 
-<script>const photos = [
-"PHOTO1.jpg",
-"PHOTO2.jpg",
-"PHOTO3.jpg",
-"PHOTO4.jpg",
-"PHOTO5.jpg"
-];
+<script>
+function move(){
+let x=Math.random()*(window.innerWidth-120);
+let y=Math.random()*(window.innerHeight-60);
 
-const messages = [
-"30 July 2026 ❤️ Hamari sabse khoobsurat beginning.",
-"Tumhari smile meri favourite feeling hai 🥹❤️",
-"Main perfect nahi hu, lekin tumse pyaar dil se karta hu.",
-"Har din bas tumhare saath aur zyada pyaar ho jata hai ❤️",
-"I Love You So Much Pari 🌹❤️"
-];
-
-let i = 0;
-
-function nextPage(){
-
-i++;
-
-if(i >= messages.length){
-alert("I Love You Forever Pari ❤️🌹");
-i = 0;
+let btn=document.getElementById("no");
+btn.style.left=x+"px";
+btn.style.top=y+"px";
 }
 
-document.getElementById("text").innerHTML = messages[i];
-document.getElementById("photo").src = photos[i];
-}
-
-setInterval(()=>{
-const heart=document.createElement("div");
-heart.className="heart";
-heart.innerHTML="❤️";
-heart.style.left=Math.random()*100+"vw";
-heart.style.animationDuration=(Math.random()*3+2)+"s";
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},5000);
-
-},250);</script>
-
-</body>
-</html>
+function yes(){
+document.body.innerHTML="<h1 style='color:white;text-align:center
