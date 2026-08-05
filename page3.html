@@ -14,3 +14,62 @@ align-items:center;
 height:100vh;
 background:linear-gradient(135deg,#ffc3a0,#ffafbd);
 font-family:Arial,sans-serif;
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+width:340px;
+}
+
+button{
+padding:12px 22px;
+font-size:18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin:10px;
+}
+
+#sahil{
+background:#ff4d6d;
+color:white;
+}
+
+#other{
+background:#999;
+color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Who loves you the most? ❤️</h2>
+
+<button id="sahil" onclick="correct()">🥰 Sahil</button>
+
+<button id="other" onclick="wrong()">🤨 Someone Else</button>
+
+</div>
+
+<script>
+
+function correct(){
+window.location.href="./page4.html";
+}
+
+function wrong(){
+alert("❌ Wrong Answer 😂\nTry Again ❤️");
+}
+
+</script>
+
+</body>
+</html>
